@@ -1,8 +1,14 @@
+#Este script precisa ser executado na pasta raiz do projeto do GitHub. 
+#Este script permite o usuário decidir se comita ou não, mesmo não passando em alguns testes. 
+
+#executando testes:
+selenium-side-runner /testes/testes-index.side
+
+#fazendo commit e push testes:
 echo "Considerando os resultados, você ainda quer realizar o commit e o push? (sim/nao)"
 read n
 yes=$(echo $n | tr -s '[:upper:]' '[:lower:]')
 if [[  "$n" = "sim"  ]] ; then
-  echo "My name"
   echo "Escreva a mensagem de commit"
         read message
         git add .
